@@ -1,0 +1,182 @@
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #000000;
+  margin: 2%;
+  background-color: #e5e5e5;
+  height: 100vh;
+}
+
+.welcome {
+  max-width: 30%;
+}
+
+h2.welcome {
+  font-size: 3.5em;
+}
+
+.line-break {
+  border: 0.05em solid black;
+}
+
+/* WIDGET */
+.widget {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px/30px;
+  margin-bottom: 4%;
+}
+
+.widget .number {
+  font-size: 2em;
+  margin: 0;
+}
+
+.widget .description {
+  margin-top: 0;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* USER */
+.user {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2%;
+}
+
+.user-info-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0;
+}
+
+.user-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user.widget {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-left: 15%;
+  padding-top: 5%;
+  padding-right: 15%;
+}
+
+.info {
+  margin-left: 5%;
+}
+
+/* HEALTH CATEGORIES OVERALL */
+.health-categories {
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-top: 4%;
+    text-align: center;
+  }
+
+.icon-box {
+  width: auto;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 40%;
+  height: 100%;
+}
+
+canvas {
+  padding-bottom: 10%;
+}
+
+.hydration {
+  background-color: #00B0FF;
+}
+
+.sleep {
+  background-color: #536DFE;
+}
+
+.activity {
+  background-color: #F50057;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1025px) {
+  .welcome {
+    max-width: 50%;
+  }
+  h2.welcome {
+    font-size: 2.5em;
+  }
+  .user-info-card {
+    flex-direction: column;
+  }
+  .user-stats {
+    flex-direction: row;
+  }
+  .user.widget {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 2%;
+  }
+  .info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  .infosection {
+    margin: 5%;
+    font-size: large;
+  }
+  .line-break {
+    margin-bottom: 8%;
+  }
+  .health-categories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  h1,
+  .user-stats,
+  .info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  .widget {
+    margin: 3% 0;
+  }
+  .health-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hydration-week-chart {
+    width: 2;
+  }
+  .icon {
+    width: 25%;
+    margin-top: 3%;
+  }
+}
